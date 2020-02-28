@@ -10,10 +10,10 @@ services:
       - "./nginx/conf.d/:/etc/nginx/conf.d/"
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:YOUR_HOSTNAME_HERE"
-      - "traefik.port=80"
+      - "traefik.frontend.rule=Host:social.dardania.dev"
+      - "traefik.port=8075"
     networks:
-      - traefik
+      - traefik_webgateway
       - app
       
   php-fpm:
@@ -27,5 +27,5 @@ services:
 
 networks:
   app:
-  traefik:
+  traefik_webgateway:
     external: true
