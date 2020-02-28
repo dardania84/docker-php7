@@ -11,7 +11,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:social.dardania.dev"
-      - "traefik.port=8075"
+      - "traefik.port=80"
     networks:
       - traefik_webgateway
       - app
